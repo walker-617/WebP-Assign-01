@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="https://kit.fontawesome.com/057364a1f8.js" crossorigin="anonymous"></script>
+    <title>MY group</title>
+</head>
+<body>
+    <i class="fa-solid fa-circle-chevron-left back" onclick="back()" style="color: #000000;"></i>
+    <h1 align="center" class="team">Team 01</h1>
+    <div class="group">
+        <div class="lead">
+            <span class="name" id="Divakar">Divakar Naidu Mahanthi</span>
+            <i class="fa-solid fa-copy name-icon" onclick="copy_lead('Divakar Naidu Mahanthi','Divakar')" style="color: #ffffff;"></i><br>
+            <p class="space"></p>
+            <span id="mahanthi">mahanthi_b200806cs@nitc.ac.in</span>
+            <i class="fa-solid fa-copy icon" onclick="copy_lead('mahanthi_b200806cs@nitc.ac.in','mahanthi')" style="color: #ffffff;"></i><br>
+            <p class="space"></p>
+            <span id="B200806CS">B200806CS</span>
+            <i class="fa-solid fa-copy icon" onclick="copy_lead('B200806CS','B200806CS')" style="color: #ffffff;"></i>
+        </div>
+        <div class="student">
+            <span class="name" id="Deepak">Deepak Chekurthi</span>
+            <i class="fa-solid fa-copy name-icon" onclick="copy('Deepak Chekurthi','Deepak')" style="color: #000000;"></i><br>
+            <p class="space"></p>
+            <span id="chekurthideepak">chekurthideepak_b200802cs@nitc.ac.in</span>
+            <i class="fa-solid fa-copy icon" onclick="copy('chekurthideepak_b200802cs@nitc.ac.in','chekurthideepak')" style="color: #000000;"></i><br>
+            <p class="space"></p>
+            <span id="B200802CS">B200802CS</span>
+            <i class="fa-solid fa-copy icon" onclick="copy('B200802CS','B200802CS')" style="color: #000000;"></i>
+        </div>
+        <div class="student">
+            <span class="name" id="Ramnivas">Ramnivas Polineni</span>
+            <i class="fa-solid fa-copy name-icon" onclick="copy('Ramnivas Polineni','Ramnivas')" style="color: #000000;"></i><br>
+            <p class="space"></p>
+            <span id="polineni">polineni_b200838cs@nitc.ac.in</span>
+            <i class="fa-solid fa-copy icon" onclick="copy('polineni_b200838cs@nitc.ac.in','polineni')" style="color: #000000;"></i><br>
+            <p class="space"></p>
+            <span id="B200838CS">B200838CS</span>
+            <i class="fa-solid fa-copy icon" onclick="copy('B200838CS','B200838CS')" style="color: #000000;"></i>
+        </div>
+        <div class="student">
+            <span class="name" id="Pramodh">Pramodh Podety</span>
+            <i class="fa-solid fa-copy name-icon" onclick="copy('Pramodh Podety','Pramodh')" style="color: #000000;"></i><br>
+            <p class="space"></p>
+            <span id="podety">podety_b200852cs@nitc.ac.in</span>
+            <i class="fa-solid fa-copy icon" onclick="copy('podety_b200852cs@nitc.ac.in','podety')" style="color: #000000;"></i><br>
+            <p class="space"></p>
+            <span id="B200852CS">B200852CS</span>
+            <i class="fa-solid fa-copy icon" onclick="copy('B200852CS','B200852CS')" style="color: #000000;"></i>
+        </div>
+        <div class="student">
+            <span class="name" id="Kushal">Kushal Puthalapattu</span>
+            <i class="fa-solid fa-copy name-icon" onclick="copy('Kushal Puthalapattu','Kushal')" style="color: #000000;"></i><br>
+            <p class="space"></p>
+            <span id="puthalapattu">puthalapattu_b200796cs@nitc.ac.in</span>
+            <i class="fa-solid fa-copy icon" onclick="copy('puthalapattu_b200796cs@nitc.ac.in','puthalapattu')" style="color: #000000;"></i><br>
+            <p class="space"></p>
+            <span id="B200796CS">B200796CS</span>
+            <i class="fa-solid fa-copy icon" onclick="copy('B200796CS','B200796CS')" style="color: #000000;"></i>
+        </div>
+    </div>
+    <p id="copied" align="center"></p>
+    <script>
+        function copy_lead(text,id){
+            var x=document.getElementById(id);
+            x.style.color="green";
+            setTimeout(()=>{
+                x.style.color="white";
+            },1000);
+            navigator.clipboard.writeText(text);
+            var y=document.getElementById("copied");
+            y.innerHTML="<b>"+text+"</b> copied to clipboard";
+        }
+
+        function copy(text,id){
+            var x=document.getElementById(id);
+            x.style.color="green";
+            setTimeout(()=>{
+                x.style.color="black";
+            },1000);
+            navigator.clipboard.writeText(text);
+            var y=document.getElementById("copied");
+            y.innerHTML="<b>"+text+"</b> copied to clipboard";
+        }
+
+        function back(){
+            window.location.href="/";
+        }
+    </script>
+</body>
+</html>

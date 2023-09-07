@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/057364a1f8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Root</title>
+</head>
+<body>
+    <h1 class="team" align="center">Assignment 1 - Creating Web Server</h1>
+    <div class="root">
+        <div class="root-icons" align="center" onclick="home()">
+            <i class="fa-solid fa-house"></i>
+            <p class="title"><b>Home</b></p>
+            <p class="desc">This redirects to <b>www.google.com</b> with status code <b>301</b>.</p>
+        </div>
+        <div class="root-icons" align="center" onclick="group()">
+            <i class="fa-solid fa-user-group" ></i>
+            <p class="title"><b>Group</b></p>
+            <p class="desc">This redirects to group details page, If not found it redirects to <b>404</b> error page.</p>
+        </div>
+    </div>
+    <!-- <div class="line"></div> --><br>
+    <p class="desc" align="center">Server listens on port <b>8080</b>.</p>
+
+    <script>
+        function home(){
+            window.location.href="/home";
+        }
+
+        function group(){
+            window.location.href="/group";
+        }
+    </script>
+</body>
+</html>
